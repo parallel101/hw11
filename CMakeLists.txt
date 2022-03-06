@@ -1,4 +1,4 @@
-# 为什么不指定 cmake_minimum_required 会导致下面 project 处出错？
+# 为什么不指定 cmake_minimum_required 会导致下面在 project 处出错？
 #cmake_minimum_required(VERSION 3.10)
 
 project(hellocmake VERSION 3.1.4 LANGUAGES CXX)
@@ -15,4 +15,4 @@ set(main_sources "src/main.cpp" "src/other.cpp" "src/dummy.cpp" "src/veryusefulf
 add_executable(main ${main_sources})
 
 # 请改为项目的正确版本（用变量来获取）
-target_compile_definitions(main PUBLIC HELLOCMAKE_VERSION="233.33.33")
+target_compile_definitions(main PRIVATE HELLOCMAKE_VERSION="233.33.33")

@@ -24,7 +24,7 @@
 
 ## 作业要求
 
-修复 CMakeLists.txt，回答注释中的问题，并让 `main.exe` 得以正常运行。
+修复 CMakeLists.txt，回答注释中的问题，并让 `main.exe` 得以构建出来，并正常运行。
 测试的结果和你的修复思路，请填到 PR 描述中。
 
 `main.exe` 正确的运行结果应该是：

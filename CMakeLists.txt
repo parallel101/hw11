@@ -39,8 +39,10 @@ add_executable(main ${main_sources})
 
 # Link libraries
 target_link_libraries(main PUBLIC mylib)
-if (WIN32)
-    install()
+if (WIN32 AND MSVC)
+    set(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/${CMAKE_BUILD_TYPE}" CACHE STRING "The path to use for make install" FORCE)
+    install (TARGETS mylib
+        RUNTIME DESTINATION ./)
 endif()
 
 # 请改为项目的正确版本（用变量来获取）-> Use configure file

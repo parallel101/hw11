@@ -38,7 +38,7 @@ file(GLOB main_sources CONFIGURE_DEPENDS
 add_executable(main ${main_sources})
 
 # Link libraries
-target_link_libraries(main PUBLIC mylib)
+target_link_libraries(main PRIVATE mylib)
 if (WIN32 AND MSVC)
     set(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/${CMAKE_BUILD_TYPE}" CACHE STRING "The path to use for make install" FORCE)
     install (TARGETS mylib

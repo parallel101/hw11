@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <mylib/mylib.h>
+#include "config.h"
 
 int main() {
 #ifdef HELLOCMAKE_VERSION

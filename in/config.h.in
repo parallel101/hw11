@@ -1,0 +1,2 @@
+#pragma once
+#define HELLOCMAKE_VERSION "@PROJECT_VERSION@"
